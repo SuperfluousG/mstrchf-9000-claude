@@ -1,0 +1,37 @@
+MSTRCHF 9000 Licence
+
+Copyright (c) 2026 Bayes Ltd. All rights reserved.
+
+This licence covers the MSTRCHF 9000 plugin and everything distributed with it: the planner app, recipes, recipe photographs, brand artwork, shop guides and skill instructions (together, "the Software").
+
+1. Free use
+
+   You may download, install and use the Software free of charge for your own use. This includes letting Claude or another AI assistant use it on your behalf.
+
+2. No redistribution
+
+   Unless Bayes Ltd gives you written permission, you may not:
+
+   a. copy, publish, share, sell, rent, sublicense or otherwise redistribute the Software or any part of it, including the recipes and photographs, except to install it for your own use;
+   b. publish or distribute modified versions of the Software or works derived from it;
+   c. use the recipes, photographs or artwork in another product, service, dataset or publication, or to train machine-learning models.
+
+   You may share links to the official download page or to this repository.
+
+3. Health, allergens and prices
+
+   Recipes, diet and allergen labels, and prices are generated for planning and may be wrong. Always check product labels for allergens and dietary suitability. Prices are estimates, not a supermarket's live prices.
+
+4. No warranty
+
+   The Software is provided "as is", without warranty of any kind. To the extent the law allows, Bayes Ltd is not liable for any loss or damage arising from its use.
+
+5. Ending this licence
+
+   This licence ends automatically if you break its terms. When it ends, you must stop using the Software and delete your copies.
+
+6. Law
+
+   This licence is governed by the law of England and Wales.
+
+To ask for permission beyond this licence, open an issue on this repository.

@@ -1,0 +1,12 @@
+{
+  "name": "mstrchf-9000",
+  "description": "MSTRCHF 9000 meal planner for Claude.",
+  "owner": { "name": "Bayes Ltd" },
+  "plugins": [
+    {
+      "name": "mstrchf-9000",
+      "source": "./",
+      "description": "Plan a week of meals to your taste, fill your grocery basket from the shopping list, and book the meals into your calendar."
+    }
+  ]
+}
