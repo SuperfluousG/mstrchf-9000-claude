@@ -14,7 +14,7 @@ A meal planner tuned to your taste, and the skills that do the shopping and the 
 
 1. Download the `mstrchf-9000-<version>.plugin` file. Don't unzip it.
 2. In Claude, go to **Customize → Plugins → Add → Upload plugin** and choose the file.
-3. Start a new chat and say: "Set up MSTRCHF 9000 for me." Claude publishes your own copy of the planner as an artifact and opens it. Your kitchen is saved to your Claude account and is private to you.
+3. Start a new chat and say: **"Open MSTRCHF 9000."** The first time, Claude sets up your own copy of the planner as an artifact on your Claude account and gives you the link; the recipe photos follow over the next couple of minutes. After that, the same words open it straight away. Your kitchen is saved to your Claude account and is private to you.
 
 If **Upload plugin** isn't there, your organisation's settings don't allow custom plugins.
 
