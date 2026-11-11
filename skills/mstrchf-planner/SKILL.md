@@ -12,7 +12,7 @@ Each person needs their own copy of the planner on their own Claude account: on 
 Files next to this skill:
 
 - `app/index.html`: the planner page (a few hundred bytes).
-- `app/setup.json`: `parts`, ready-made `files` lists for the Artifact tool, one per publish. `parts[0]` is the page's script, stylesheet, fonts, icon and brand images (11 files); the later parts are the recipe photos (about 195 each).
+- `app/setup.json`: `parts`, ready-made `files` lists for the Artifact tool, one per publish. `parts[0]` is the page's scripts, stylesheet, fonts, icon and brand images (13 files); `parts[1]` is the 390 recipe photos, packed into three files of about 7 MB.
 - `app/files.json` and the rest of `app/`: the files themselves.
 
 ## Open the planner
@@ -35,8 +35,8 @@ Publishing needs the Artifact tool, which the Claude desktop app and claude.ai p
    - `capabilities`: `{"db": {}, "user": {}, "downloads": true}`
    - `icon`: `"recipe"`
    - `description`: "A weekly meal planner tuned to your taste, with a shopping list ready for Claude to fill your grocery basket."
-3. Give the user the link straight away, and say in one line that the recipe photos are still arriving and will appear in a minute or two. The first visit asks a few questions (household, likes, budget), then plans the week.
-4. For each further part, first tell the user in one line which photos are on their way (for example "Adding recipe photos, part 1 of 2"), then publish again with the same `file_path` and `root`, `url` set to the new artifact, and `files` set to that part, exactly as written. Leave out `capabilities` and `icon`; they carry forward.
+3. Give the user the link straight away, and say in one line that the recipe photos are still arriving and will appear shortly (until then each dish shows a drawn plate). The first visit asks a few questions (household, likes, budget), then plans the week.
+4. For each further part, first tell the user in one line which photos are on their way (for example "Adding the recipe photos"), then publish again with the same `file_path` and `root`, `url` set to the new artifact, and `files` set to that part, exactly as written. Leave out `capabilities` and `icon`; they carry forward.
 5. When the last part is in, tell the user the photos are all there.
 
 Do not change the page or its files. Do not add `db` rules: the default keeps each person's `data/users/<id>/` private.
@@ -50,9 +50,9 @@ A new plugin version brings a new planner build, but the user's artifact keeps t
    - `url`: their artifact;
    - `file_path`: the copied `index.html`;
    - `root`: the copied `app` folder;
-   - `files`: a map of every path in `app/files.json` that their listing lacks, each to itself, plus `null` for every listed path (other than `index.html`) that is not in `app/files.json`.
+   - `files`: a map of every path in `app/files.json` that their listing lacks, each to itself.
 
-   Leave out `capabilities` and `icon`. If more than 250 paths are new, publish the ones in `parts[0]` first, then the rest in batches of at most 250.
+   Leave out `capabilities` and `icon`. Leave their old files in place: they do no harm, and removing them (an older copy has about 390 separate photos) would mean writing out every path. Only if their listing plus the new paths would exceed 480 files, also send `null` for listed paths (other than `index.html`) that are not in `app/files.json`, in batches of at most 250.
 3. Tell the user the planner is updated and their kitchen is unchanged.
 
 ## Read this week's plan
